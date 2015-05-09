@@ -1,0 +1,19 @@
+{
+  "name": "React-Test-Field",
+  "version": "0.0.0",
+  "authors": [
+    "Gerard Chin <gerardchin91@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.3",
+    "breakpoint": "~4.6.4"
+  }
+}
