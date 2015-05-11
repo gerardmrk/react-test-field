@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './components/main.jsx';
+import Main from '../../../TESTFIELD/main.jsx';
 
 
 class App extends React.Component {
