@@ -1,49 +1,127 @@
-$color-wet-asphalt: #34495e;
+@import '../../bower_components/susy/sass/susy';
+@import '../../bower_components/breakpoint/breakpoint/breakpoint';
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
+
 $color-white: #fff;
-$color-accent: #ff4081;
+$color-milk: #fbfefb;
+$color-clouds: #ecf0f1;
+$color-wet-asphalt: #34495e;
+$color-midnight-blue: #2c3e50;
+$font-reset: 'Helvetica Neue', Arial, sans-serif;
+$font-stack: 'Open Sans', Helvetica, sans-serif;
+$global-transition-duration: .3s;
 
 
-body > div {
-  padding: 20px 40px;
+// ------------------------ RESET ------------------------
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-nav {
-  ul {
-    margin: 20px 0 0;
-    padding: 0;
-  }
+body {
+  font: 16px/1 $font-reset;
+  margin: 0;
+}
 
-  li {
-    display: inline-block;
-    margin-right: 15px;
+iframe {
+  border: 0;
+}
 
-    a {
-      color: $color-wet-asphalt;
-      display: inline-block;
-      padding: 8px 10px;
-      text-decoration: none;
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+blockquote,
+figure,
+button {
+  margin: 0;
+  padding: 0;
+}
 
-      &:hover {
-        color: darken($color-wet-asphalt, 20%);
-      }
-    }
+li {
+  display: block;
+}
 
-    &.current {
-      a {
-        background: $color-accent;
-        color: $color-white;
+h1,
+h2,
+h3,
+p {
+  font-size: inherit;
+}
 
-      }
-    }
+strong {
+  font-weight: bold;
+}
+
+sup {
+  font-size: 65%;
+  line-height: 0;
+  position: relative;
+  top: -.5em;
+  vertical-align: baseline;
+}
+
+a,
+button {
+  color: inherit;
+  transition: $global-transition-duration;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  overflow: visible;
+
+  &:focus {
+    outline: 0;
   }
 }
 
-.content {
-  background: $color-accent;
-  display: inline-block;
-  padding: 20px;
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
 
-  img {
-    max-width: 100%;
-  }
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+
+// ----------------- GRID INITIALISATION -----------------
+$susy: (
+  columns: 12,
+  container: 80%,
+  global-box-sizing: border-box
+);
+
+.wrapper {
+  @include container;
+}
+
+
+// ----------------------- DEFAULT -----------------------
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-milk;
+  color: $color-wet-asphalt;
+  font-family: $font-stack;
 }
