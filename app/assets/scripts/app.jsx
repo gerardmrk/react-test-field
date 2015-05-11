@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './NavSimple/main.jsx';
+import Main from './components/main.jsx';
 
 
 class App extends React.Component {
