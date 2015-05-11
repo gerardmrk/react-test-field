@@ -22,18 +22,20 @@ cd ~/Documents/DevWorkspace/ && git clone git@github.com:gerardmrk/react-test-fi
 
 ## Instructions:
 
-1. Your Parent Component is main.jsx in TESTFIELD/. Your child components can be placed in TESTFIELD/components.
-  * The main React.render method is in app/assets/scripts/app.jsx, in case you need to modify it directly.
+1. Main Parent Component is  `TESTFIELD/main.jsx`.
+2. Child components can be placed in `TESTFIELD/components`.
+  * The main React.render method is in `app/assets/scripts/app.jsx`, in case you need to modify it directly.
   * Reminder: Don't forget to import/require React at the start of each component's JS file!
 
-2. Feel free to add CSS styles inside the components itself.
-  * The main SCSS file is in app/assets/styles/butter.scss, in case you want to modify it directly.
+3. Main SCSS file is in `app/assets/styles/butter.scss`.
+  * Feel free to add CSS styles inside the components itself.
   * Uncomment the RESET section in the main SCSS file if you'd like to implement reset.css.
   * Default layout is 12 grids (Initialised in the main file). Use the span keyword to indicate how many columns your component should take up (refer to susy-sass docs).
   * You probably don't actually need Breakpoint-sass. I just added it in for completeness-sake. I'm weird.
 
-3. Feel free to delete or modify .eslintrc and .eslintignore if you're not using Atom.
-  * Caution: If you're planning on using the eslintrc rules to lint your file, note that it is very ES6-centric (if that's the word I'm supposed to use). Feel free to disable the ES6 rules or tone down the rules' warnings.
+3. The .eslintrc and .eslintignore is redundant if you're not using Atom.
+  * If you're using Sublime, you could probably use that .eslintrc file to lint with ES6 rules. But it's up to you to configure it accordingly.
+  * Caution: If you're planning on using the .eslintrc rules to lint your file, note that it is very ES6-centric (if that's the word I'm supposed to use). Feel free to disable the ES6 rules or tone down the rules' warnings.
 
 
 ## Things to fix:
