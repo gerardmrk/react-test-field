@@ -15,30 +15,21 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 
-
 // Sass Converter and CSS Minifier
 gulp.task('transformSass', function gulpTransformSass() {
   return gulp.src('./app/assets/styles/*.scss')
-    // Initialize sourcemaps for debugging
     .pipe(sourcemaps.init({ loadMaps: true }))
-    // Preprocess Sass files
     .pipe(sass({ errLogToConsole: true }))
-    // Catch errors to prevent process-termination
     .on('error', function sassError(err) { gutil.log(err); this.emit('end'); })
-    // Minify converted CSS files
     .pipe(minifyCSS())
-    // Write to sourcemaps
     .pipe(sourcemaps.write('./maps'))
-    // Write to app/build/build.js
     .pipe(gulp.dest('./app/build'))
     .pipe(reload({ stream: true }));
 });
 
 
-
 // Browserifier and Babelifier
 gulp.task('transformJsx', function gulpTransformJsx() {
-  // Initialize browserify with options
   var bundler = browserify({ debug: true })
     .add('./app/assets/scripts/app.jsx')
     .transform(babelify)
